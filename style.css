@@ -1,0 +1,341 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background: linear-gradient(135deg, #1f2e69, #f8cdda);
+  background-color: #48484a; /* Fallback color */
+  overflow-x: hidden;
+  height: 100vh;
+  background-attachment: fixed; /* For a parallax scrolling effect */
+}
+
+
+a {
+  text-decoration: none;
+  color: #fbf9f9;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(40px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+      opacity: 0;
+      transform: translateX(-100%);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.05);
+  }
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #1a1a2e;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  animation: slideIn 1s ease-in-out;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?music') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+.hero-content {
+  animation: fadeInUp 2s ease-in-out;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  animation: pulse 1.5s infinite;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.btn-cta {
+  background-color: #ff4c68;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: fadeInUp 2.5s ease;
+}
+
+.btn-cta:hover {
+  background-color: #ff2a4a;
+  transform: scale(1.1);
+}
+
+/* Features Section */
+.features {
+  padding: 100px 20px;
+  background-color: #f4f4f9;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #333;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+.feature-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.feature-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.feature-card:nth-child(1) {
+  animation: fadeInUp 1.8s ease forwards;
+}
+
+.feature-card:nth-child(2) {
+  animation: fadeInUp 2s ease forwards;
+}
+
+.feature-card:nth-child(3) {
+  animation: fadeInUp 2.2s ease forwards;
+}
+
+.feature-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #1a1a2e;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* About Section */
+.about {
+  padding: 100px 20px;
+  background-color: #fff;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1.8s ease forwards;
+}
+
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #1a1a2e;
+}
+
+.about p {
+  font-size: 18px;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Footer */
+.footer {
+  background-color: #1a1a2e;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  animation: fadeInUp 2s ease forwards;
+}
+
+.footer a {
+  color: #ff4c68;
+}
+
+.footer p {
+  margin-bottom: 5px;
+}
+
+/* Signup Section */
+.signup {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #1f2e69, #f8cdda);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.signup-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: 100%;
+  animation: slideInUp 1.5s ease forwards;
+}
+
+.signup h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: -webkit-linear-gradient(45deg, #ff416c, #ff4b2b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.signup p {
+  font-size: 16px;
+  margin-bottom: 40px;
+  color: #f0f0f0;
+  opacity: 0.8;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-field {
+  padding: 15px;
+  border-radius: 25px;
+  border: none;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  outline: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.input-field:focus {
+  background-color: rgba(255, 255, 255, 1);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-signup-form {
+  padding: 15px 0;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(255, 0, 80, 0.5);
+  transition: all 0.4s ease;
+  transform: translateY(0);
+}
+
+.btn-signup-form:hover {
+  background: linear-gradient(45deg, #ff4b2b, #ff416c);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 0, 80, 0.7);
+}
+
+.signup-footer {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #f0f0f0;
+}
+
+.signup-footer a {
+  color: #ff4b2b;
+  text-decoration: none;
+}
+
+.signup-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes slideInUp {
+  from {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+
