@@ -105,7 +105,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #e7dada;
+  color: #e3dede;
   text-align: center;
   padding: 0 20px;
   position: relative;
@@ -143,7 +143,6 @@ a:hover {
   animation: glow 1s ease infinite;
 }
 
-/* Glowing effect on hover */
 @keyframes glow {
   0%, 100% {
     box-shadow: 0 0 5px rgba(255, 0, 0, 0.7), 0 0 10px rgba(255, 0, 0, 0.5), 0 0 15px rgba(255, 0, 0, 0.3);
@@ -283,7 +282,7 @@ a:hover {
 
 .signup {
   padding: 100px 20px;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://w.wallhaven.cc/full/3z/wallhaven-3z1q5y.jpg') no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://e0.pxfuel.com/wallpapers/771/427/desktop-wallpaper-music-notes-cool-background-with-music.jpg') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -308,7 +307,7 @@ a:hover {
   color: #fff;
   letter-spacing: 1px;
   text-transform: uppercase;
-  background: -webkit-linear-gradient(45deg, #ff416c, #ff4b2b);
+  background: -webkit-linear-gradient(45deg, #4450bd, #ff2bb5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -331,8 +330,8 @@ a:hover {
   border-radius: 25px;
   border: none;
   font-size: 16px;
-  background-color: rgba(255, 255, 255, 0.9);
-  color: #333;
+  background-color: rgba(220, 220, 220, 0.9);
+  color: #3a2f82;
   outline: none;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -346,21 +345,21 @@ a:hover {
 
 .btn-signup-form {
   padding: 15px 0;
-  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  background: -webkit-linear-gradient(45deg, #4450bd, #ff2bb5);
   color: #fff;
   font-size: 18px;
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  box-shadow: 0 6px 20px rgba(255, 0, 80, 0.5);
+  box-shadow: 0 6px 20px rgba(43, 5, 210, 0.5);
   transition: all 0.4s ease;
   transform: translateY(0);
 }
 
 .btn-signup-form:hover {
-  background: linear-gradient(45deg, #ff4b2b, #ff416c);
+  background: -webkit-linear-gradient(45deg, #1589d6, #ff2bb5);
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(255, 0, 80, 0.7);
+  box-shadow: 0 10px 25px rgba(7, 42, 238, 0.7);
 }
 
 .signup-footer {
